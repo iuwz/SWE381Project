@@ -16,61 +16,8 @@ include("header.html");
 </head>
 
 <body data-new-gr-c-s-check-loaded="14.1162.0" data-gr-ext-installed="" class="vsc-initialized">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="container">
-
-
-
-
-
-
-
         <div id="content" class="d-flex flex__center snippet-hidden">
-
-
-
             <div class="d-flex ai-center jc-center sm:fd-column-reverse">
                 <div class="upPartSignUP">
                     <div class="upPartRight">
@@ -115,10 +62,6 @@ include("header.html");
 
                     <div class="wmx4 ta-center fs-title mx-auto mb24 d-none md:d-block sm:mb0">
                     </div>
-
-
-
-
                     <div id="formContainer">
                         <form id="login-form" class="signupform" action="/users/signup?ssrc=head&amp;returnurl=https%3a%2f%2fstackoverflow.com%2fquestions%2f21279442%2fxampp-mysql-not-starting-attempting-to-start-mysql-service" method="POST"><input type="hidden" name="fkey" value="f15a1dae222b05c90c154629b4b95f1a00805d62aa36c9b594c4ffa1eef56447">
 
@@ -133,11 +76,7 @@ include("header.html");
                                 </label>
                             </div>
                             <p class="flex--item s-input-message js-error-message d-none">
-
                             </p>
-
-
-
                             <p class="flex--item s-input-message js-error-message d-none">
 
                             </p>
