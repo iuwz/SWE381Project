@@ -1,0 +1,307 @@
+/* This will center the content div on the page */
+
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* Use viewport height to take full height of the screen */
+}
+
+/* Center the logo SVG inside its link */
+.ta-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Ensure the form elements are stacked and centered */
+#login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* Adjust width as needed */
+}
+
+/* Ensure each input group takes full width and is stacked */
+.omrs-input-group {
+    width: 100%;
+    margin-bottom: 16px;
+    /* Space between input fields */
+}
+
+/* Button within form */
+#formContainer .btn {
+    width: 100%;
+    /* Full-width button */
+    margin-top: 20px;
+    /* Space above the button */
+}
+
+/* Apply this to center the social buttons and form container */
+#openid-buttons,
+#formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    /* Adjust width as needed, can be up to 100% */
+    max-width: 500px;
+    /* Maximum width of the containers */
+    margin-bottom: 24px;
+    /* Space between the containers */
+    gap: 10px;
+}
+
+.logo {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 20px;
+
+}
+
+/* Add this to center the sign up link */
+.native svg-icon iconLogoGlyphMd {
+    height: 1.5rem;
+}
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+/* Add this if the formContainer is not already centered */
+#formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Rest of your CSS stays the same */
+
+
+.button-6 {
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+}
+
+.button-6:hover,
+.button-6:focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.button-6:hover {
+    transform: translateY(-1px);
+}
+
+.button-6:active {
+    background-color: #F0F0F1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
+}
+
+/** BEGIN: Non Openmrs CSS **/
+
+
+
+
+div.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding: 21px;
+    border-radius: 4px;
+}
+
+
+:root {
+    --omrs-color-ink-lowest-contrast: rgba(47, 60, 85, 0.18);
+    --omrs-color-ink-low-contrast: rgba(60, 60, 67, 0.3);
+    --omrs-color-ink-medium-contrast: rgba(19, 19, 21, 0.6);
+    --omrs-color-interaction: #1e4bd1;
+    --omrs-color-interaction-minus-two: rgba(73, 133, 224, 0.12);
+    --omrs-color-danger: #b50706;
+    --omrs-color-bg-low-contrast: #eff1f2;
+    --omrs-color-ink-high-contrast: #121212;
+    --omrs-color-bg-high-contrast: #ffffff;
+
+}
+
+/** END: Non Openmrs CSS **/
+div.omrs-input-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+    width: 20.4375rem;
+}
+
+/* Input*/
+
+.omrs-input-filled>input {
+    border: none;
+    border-bottom: 0.125rem solid var(--omrs-color-ink-medium-contrast);
+    width: 190px;
+    height: 3.5rem;
+    font-size: 1.0625rem;
+    padding-left: 0.875rem;
+    line-height: 147.6%;
+    padding-top: 0.825rem;
+    padding-bottom: 0.5rem;
+}
+
+
+.omrs-input-filled>input:focus {
+    outline: none;
+}
+
+
+.omrs-input-filled>.omrs-input-label {
+    position: absolute;
+    top: 0.9375rem;
+    left: 0.875rem;
+    line-height: 147.6%;
+    color: var(--omrs-color-ink-medium-contrast);
+    transition: top .2s;
+}
+
+
+.omrs-input-filled>svg {
+    position: absolute;
+    top: 0.9375rem;
+    right: 0.875rem;
+    fill: var(--omrs-color-ink-medium-contrast);
+}
+
+
+.omrs-input-filled>.omrs-input-helper {
+    font-size: 0.9375rem;
+    color: var(--omrs-color-ink-medium-contrast);
+    letter-spacing: 0.0275rem;
+    margin: 0.125rem 0.875rem;
+}
+
+
+.omrs-input-filled>input:hover {
+    background: var(--omrs-color-interaction-minus-two);
+    border-color: var(--omrs-color-ink-high-contrast);
+}
+
+
+.omrs-input-filled>input:focus+.omrs-input-label,
+.omrs-input-filled>input:valid+.omrs-input-label {
+    top: 0;
+    font-size: 0.9375rem;
+    margin-bottom: 32px;
+    ;
+}
+
+
+.omrs-input-filled:not(.omrs-input-danger)>input:focus+.omrs-input-label {
+    color: var(--omrs-color-interaction);
+}
+
+
+.omrs-input-filled:not(.omrs-input-danger)>input:focus {
+    border-color: var(--omrs-color-interaction);
+}
+
+
+.omrs-input-filled:not(.omrs-input-danger)>input:focus~svg {
+    fill: var(--omrs-color-ink-high-contrast);
+}
+
+/** DISABLED **/
+
+
+
+
+/** DANGER **/
+
+
+.omrs-input-filled.omrs-input-danger>.omrs-input-label,
+.omrs-input-filled.omrs-input-danger>.omrs-input-helper {
+    color: var(--omrs-color-danger);
+}
+
+.omrs-input-danger>svg {
+    fill: var(--omrs-color-danger);
+}
+
+.omrs-input-danger>input {
+    border-color: var(--omrs-color-danger);
+}
+
+
+
+.omrs-input-filled>input {
+    background: var(--omrs-color-bg-low-contrast);
+}
+
+.upPartSignUP {
+    display: flex;
+    flex-direction: row;
+}
+
+.feat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.upPartRight {
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.signupform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.signupform p {
+    font-size: xx-small;
+    text-align: center;
+    padding-bottom: 7.5px;
+
+}

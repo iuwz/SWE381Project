@@ -1,0 +1,130 @@
+.svg14 .svg-icon {
+    width: 14px;
+    height: 14px
+}
+
+.svg24 .svg-icon {
+    width: var(--su-static24);
+    height: var(--su-static24)
+}
+
+
+.js-accordion-item .open {
+    display: none
+}
+
+body:not(.unified-theme) .container._full.channels-landing #content .inner-content {
+    padding-bottom: 0;
+    padding-top: 0
+}
+
+body:not(.unified-theme) .container._full #content .inner-content {
+    padding: var(--su24) calc(var(--su16) - var(--su1))
+}
+
+@media (prefers-color-scheme:dark) {}
+
+
+
+.qlist-wrapper--boxed>#question-mini-list {
+    margin-bottom: 0
+}
+
+.qlist-wrapper--boxed>#question-mini-list .question-summary:last-child {
+    border-bottom: none
+}
+
+
+
+.atwho-view-ul .autocomplete-result {
+    margin: 0
+}
+
+.post-tag.invalid-tag {
+    border: 1px solid var(--red-400)
+}
+
+[contenteditable=true]:empty:before {
+    content: attr(placeholder);
+    color: var(--black-300);
+    display: block
+}
+
+.comment-form>form textarea,
+.comment-form>form div[contenteditable=true] {
+    height: auto;
+    min-height: 5em
+}
+
+.comment-form .f-input {
+    padding-left: var(--su-static8);
+    padding-right: var(--su-static8)
+}
+
+
+.atwho-view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    margin-top: 18px;
+    background: var(--white);
+    color: var(--fc-black-600);
+    border: 1px solid var(--black-225);
+    box-shadow: var(--bs-md);
+    width: 550px;
+    max-width: 80vw;
+    z-index: var(--zi-navigation)
+}
+
+.atwho-view .atwho-header {
+    padding: var(--su4);
+    margin: var(--su4);
+    cursor: pointer;
+    border-bottom: solid 1px var(--black-200);
+    font-weight: bold;
+    font-size: var(--fs-fine);
+    color: var(--fc-black-400)
+}
+
+.atwho-view .atwho-header:hover {
+    cursor: default
+}
+
+.atwho-view .atwho-header .small {
+    color: var(--fc-black-400);
+    float: right;
+    padding-top: var(--su2);
+    margin-right: -5px;
+    font-size: var(--fs-caption);
+    font-weight: normal
+}
+
+.atwho-view .cur {
+    background-color: var(--blue-200)
+}
+
+.atwho-view .cur strong {
+    font-weight: bold
+}
+
+.atwho-view strong {
+    color: inherit;
+    font-weight: inherit
+}
+
+.atwho-view ul {
+    list-style: none;
+    padding: 0;
+    margin: auto;
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden
+}
+
+.atwho-view ul li {
+    display: block;
+    padding: 5px 10px;
+    border-bottom: 1px solid var(--black-225);
+    cursor: pointer
+}
