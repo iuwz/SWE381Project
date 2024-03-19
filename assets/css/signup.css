@@ -55,7 +55,7 @@
     margin-bottom: 24px;
     /* Space between the containers */
     gap: 10px;
-    margin-left: 10px;
+    margin-left: 0px;
 }
 
 .logo {
@@ -316,9 +316,10 @@ div.omrs-input-group {
 }
 
 .signupform {
-    margin-left: 10px;
+    margin-left: -22px;
 }
 
 .haveAcc {
     font-size: larger;
+    margin-left: 45px;
 }
