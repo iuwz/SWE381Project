@@ -170,7 +170,7 @@ div.omrs-input-group {
 .omrs-input-filled>input {
     border: none;
     border-bottom: 0.125rem solid var(--omrs-color-ink-medium-contrast);
-    width: 190px;
+    width: 215px;
     height: 3.5rem;
     font-size: 1.0625rem;
     padding-left: 0.875rem;
