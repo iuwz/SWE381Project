@@ -55,6 +55,7 @@
     margin-bottom: 24px;
     /* Space between the containers */
     gap: 10px;
+    margin-left: 10px;
 }
 
 .logo {
@@ -304,4 +305,16 @@ div.omrs-input-group {
     text-align: center;
     padding-bottom: 7.5px;
 
+}
+
+.upPartRight {
+    font-size: larger;
+}
+
+.logosignup {
+    margin-left: 0px;
+}
+
+.signupform {
+    margin-left: 10px;
 }
