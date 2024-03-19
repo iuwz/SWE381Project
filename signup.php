@@ -119,8 +119,8 @@ include("header.html");
 
 
 
-                <div class="mx-auto ta-center fs-body1 p16 mb24 w100 js-redirects sm:mb sm:bb bc-black-225 pb32 wmx5">
-                    Already have an account? <a href="/users/login?ssrc=head&amp;returnurl=https%3a%2f%2fstackoverflow.com%2fquestions%2f21279442%2fxampp-mysql-not-starting-attempting-to-start-mysql-service" name="login">Log in</a>
+                <div class="haveAcc">
+                    Already have an account? <a href="login.php" name="login">Log in</a>
 
 
                 </div>

@@ -301,7 +301,7 @@ div.omrs-input-group {
 }
 
 .signupform p {
-    font-size: xx-small;
+    font-size: larger;
     text-align: center;
     padding-bottom: 7.5px;
 
@@ -317,4 +317,8 @@ div.omrs-input-group {
 
 .signupform {
     margin-left: 10px;
+}
+
+.haveAcc {
+    font-size: larger;
 }
