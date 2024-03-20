@@ -91,13 +91,41 @@
             <div class="search-btn">
                 <i class="fas fa-search"></i>
             </div>
-
+            <div class="avatar-dropdown">
+                <a href="" id="profAvatarContainer" class="btn btn-login"><img
+                        src="assets/images/account_profile_user_avatar_icon_219236.png" class="avatar-image"
+                        alt="profileAvatar"></img> </a>
+                <div class="dropdown-content">
+                    <a href="profile.php">Profile</a>
+                    <a href="settings.php">Settings</a>
+                    <a href="logout.php">Logout</a>
+                </div>
+            </div>
             <form action="index.php" method="post">
-                <input type="submit"class="btn btn-login" name="logout" value="Log Out"> 
+                <input type="submit" class="btn btn-login" name="logout" value="Log Out">
             </form>
-            <a href="signup.php" class="btn btn-register">Sign up</a>
+
+
 
         </div>
     </nav>
     <script src="assets/js/main.js"></script>
+    <script>document.querySelector('#profAvatarContainer').onclick = function (event) {
+            event.preventDefault();
+            document.querySelector('.dropdown-content').classList.toggle("show");
+        };
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.avatar-image')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };</script>
+
 </body>
