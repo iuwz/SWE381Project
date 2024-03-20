@@ -1,7 +1,7 @@
 <?php
 session_start(); // Start the session at the very beginning
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-    header('Location: index.php'); // Redirect to index.php if the user is already logged in
+    echo "<script>window.location.href = 'index.php';</script>";
     exit; // Make sure no further code is executed
 }
 include("header.html");

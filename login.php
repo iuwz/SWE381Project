@@ -1,4 +1,8 @@
 <?php
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+    echo "<script>window.location.href = 'index.php';</script>";
+    exit; // Make sure no further code is executed
+}
 include("db.php");
 session_start();
 include("header.html");
@@ -139,17 +143,34 @@ include("header.html");
 <?php
 if (isset($_POST['login'])) {
     $email = $_POST['email'];
-    $password = $_POST['password'];
-    $query = "SELECT * FROM users WHERE email='?' AND password='?'";
-    $query = str_replace("?", $email, $query);
-    $query = str_replace("?", $password, $query);
-    $result = mysqli_query($conn, $query);
-    if (mysqli_num_rows($result) > 0) {
-        $_SESSION['email'] = $email;
-        header("Location: index.php");
+    // Removed password direct use here for security.
+
+    // Prepare statement to prevent SQL Injection
+    $stmt = $conn->prepare("SELECT id, email, password FROM users WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        if (password_verify($_POST['password'], $row['password'])) {
+            // Set session variables
+            $_SESSION['user_id'] = $row['id']; // Assuming 'id' is the column name for user IDs.
+            $_SESSION['email'] = $email;
+            $_SESSION['loggedin'] = true;
+
+            echo "<script>window.location.href = 'index.php';</script>";
+            exit; // Make sure no further code is executed
+        } else {
+            // Password is not correct
+            echo "<script>alert('Invalid email or password.');</script>";
+        }
     } else {
-        echo "Invalid email or password";
+        // No user found
+        echo "<script>alert('Invalid email or password.');</script>";
     }
+    $stmt->close();
+    $conn->close();
 }
 include("footer.html");
 ?>
