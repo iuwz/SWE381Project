@@ -3,17 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Stack Overflow - Where Developers Learn, Share, &amp; Build Careers</title>
     <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico?v=ec617d715196">
-    <link rel="apple-touch-icon"
-        href="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a">
+    <link rel="apple-touch-icon" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a">
     <link rel="image_src" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
@@ -100,8 +96,8 @@
                     </div>
 
 
-                    <a href="#" class="btn btn-login">Log in</a>
-                    <a href="#" class="btn btn-register">Sign up</a>
+                    <a href="login.php" class="btn btn-login">Log in</a>
+                    <a href="signup.php" class="btn btn-register">Sign up</a>
                 </div>
             </nav>
         </div>
@@ -209,8 +205,7 @@
             <div class="options">
                 <div class="option">
                     <div class="option-icon">
-                        <img src="https://cdn.sstatic.net/Img/home/private-questions.svg?v=a4f1cfb08f7e"
-                            alt="Private Q&A">
+                        <img src="https://cdn.sstatic.net/Img/home/private-questions.svg?v=a4f1cfb08f7e" alt="Private Q&A">
                     </div>
                     <div class="option-description">
                         Quickly find and share internal knowledge with <a href="#" class="option-link">Private Q&A</a>
@@ -218,24 +213,20 @@
                 </div>
                 <div class="option">
                     <div class="option-icon">
-                        <img src="https://cdn.sstatic.net/Img/home/find-candidate.svg?v=9099aa106ad3"
-                            alt="Talent solutions">
+                        <img src="https://cdn.sstatic.net/Img/home/find-candidate.svg?v=9099aa106ad3" alt="Talent solutions">
                     </div>
                     <div class="option-description">
-                        Find the perfect candidate for your growing technical team with <a href="#"
-                            class="option-link">Talent solutions</a>
+                        Find the perfect candidate for your growing technical team with <a href="#" class="option-link">Talent solutions</a>
 
 
                     </div>
                 </div>
                 <div class="option">
                     <div class="option-icon">
-                        <img src="https://cdn.sstatic.net/Img/home/accelerate.svg?v=9d4c2786ff02"
-                            alt=" Advertising platform">
+                        <img src="https://cdn.sstatic.net/Img/home/accelerate.svg?v=9d4c2786ff02" alt=" Advertising platform">
                     </div>
                     <div class="option-description">
-                        Accelerate the discovery of your products or services through our <a href="#"
-                            class="option-link">Advertising platform</a>
+                        Accelerate the discovery of your products or services through our <a href="#" class="option-link">Advertising platform</a>
                     </div>
                 </div>
             </div>
@@ -405,8 +396,7 @@
         <div class="container">
             <div class="hire-content">
                 <div class="hire-item">
-                    <img src="https://cdn.sstatic.net/Img/home/find-candidate.svg?v=9099aa106ad3" alt=""
-                        class="hire-icon">
+                    <img src="https://cdn.sstatic.net/Img/home/find-candidate.svg?v=9099aa106ad3" alt="" class="hire-icon">
                     <h4 class="hire-item-title">Hire your technical talent</h4>
                     <p class="hire-item-description">We help expand your technical hiring strategy to promote your
                         employer brand and highlight relevant open roles to our community of over 100 million developers
@@ -435,27 +425,23 @@
                 <div class="questions-body">
                     <div class="questions-body-items">
                         <div class="questions-body-item" data-id="0">
-                            <img src="https://cdn.sstatic.net/Img/home/ask-a-question.svg?v=f4f2050b0297" alt=""
-                                class="question-item-icon">
+                            <img src="https://cdn.sstatic.net/Img/home/ask-a-question.svg?v=f4f2050b0297" alt="" class="question-item-icon">
                             <div class="question-item-text">Ask a question</div>
                             <div class="question-arrow-right"></div>
                         </div>
                         <div class="questions-body-item" data-id="1">
-                            <img src="https://cdn.sstatic.net/Img/home/votes.svg?v=748a8f48a8e2" alt=""
-                                class="question-item-icon">
+                            <img src="https://cdn.sstatic.net/Img/home/votes.svg?v=748a8f48a8e2" alt="" class="question-item-icon">
                             <div class="question-item-text">Vote on everything</div>
                             <div class="question-arrow-right"></div>
                         </div>
                         <div class="questions-body-item" data-id="2">
-                            <img src="https://cdn.sstatic.net/Img/home/answer.svg?v=4cd8048a676c" alt=""
-                                class="question-item-icon">
+                            <img src="https://cdn.sstatic.net/Img/home/answer.svg?v=4cd8048a676c" alt="" class="question-item-icon">
                             <div class="question-item-text">Answer questions</div>
                             <div class="question-arrow-right"></div>
                         </div>
                     </div>
                     <div class="questions-body-item-content">
-                        <img src="https://cdn.sstatic.net/Img/home/illo-feats-vote.svg?v=9d2eb0efdc17" alt=""
-                            class="question-item-content-img">
+                        <img src="https://cdn.sstatic.net/Img/home/illo-feats-vote.svg?v=9d2eb0efdc17" alt="" class="question-item-content-img">
                         <h4 class="question-item-content-text">
                             Accept the answer which solved your problem to let others benefit from the valuable
                             information.
@@ -464,20 +450,17 @@
                     </div>
                     <div class="questions-body-items">
                         <div class="questions-body-item" data-id="3">
-                            <img src="https://cdn.sstatic.net/Img/home/tags.svg?v=913379eb09eb" alt=""
-                                class="question-item-icon">
+                            <img src="https://cdn.sstatic.net/Img/home/tags.svg?v=913379eb09eb" alt="" class="question-item-icon">
                             <div class="question-item-text">Tag your question</div>
                             <div class="question-arrow-left"></div>
                         </div>
                         <div class="questions-body-item" data-id="4">
-                            <img src="https://cdn.sstatic.net/Img/home/accept.svg?v=27d5be078970" alt=""
-                                class="question-item-icon">
+                            <img src="https://cdn.sstatic.net/Img/home/accept.svg?v=27d5be078970" alt="" class="question-item-icon">
                             <div class="question-item-text">Accept a answer</div>
                             <div class="question-arrow-left"></div>
                         </div>
                         <div class="questions-body-item" data-id="5">
-                            <img src="https://cdn.sstatic.net/Img/home/get-recognized.svg?v=3b339d9aa10c" alt=""
-                                class="question-item-icon">
+                            <img src="https://cdn.sstatic.net/Img/home/get-recognized.svg?v=3b339d9aa10c" alt="" class="question-item-icon">
                             <div class="question-item-text">Get recognized</div>
                             <div class="question-arrow-left"></div>
                         </div>
@@ -545,25 +528,21 @@
                     <div class="jobs-items">
                         <div class="column">
                             <div class="jobs-item">
-                                <img src="https://cdn.sstatic.net/Img/home/jobs-tech.svg?v=42f011c01763" alt=""
-                                    class="jobs-item-img">
+                                <img src="https://cdn.sstatic.net/Img/home/jobs-tech.svg?v=42f011c01763" alt="" class="jobs-item-img">
                                 <p class="jobs-item-description">Browse jobs by technology</p>
                             </div>
                             <div class="jobs-item">
-                                <img src="https://cdn.sstatic.net/Img/home/jobs-salary.svg?v=401840ff8931" alt=""
-                                    class="jobs-item-img">
+                                <img src="https://cdn.sstatic.net/Img/home/jobs-salary.svg?v=401840ff8931" alt="" class="jobs-item-img">
                                 <p class="jobs-item-description">Browse jobs by salary</p>
                             </div>
                         </div>
                         <div class="column">
                             <div class="jobs-item">
-                                <img src="https://cdn.sstatic.net/Img/home/jobs-visa.svg?v=1f3acc6dc772" alt=""
-                                    class="jobs-item-img">
+                                <img src="https://cdn.sstatic.net/Img/home/jobs-visa.svg?v=1f3acc6dc772" alt="" class="jobs-item-img">
                                 <p class="jobs-item-description">Browse jobs by visa sponsorship</p>
                             </div>
                             <div class="jobs-item">
-                                <img src="https://cdn.sstatic.net/Img/home/jobs-remote.svg?v=a4b4d1b5a80c" alt=""
-                                    class="jobs-item-img">
+                                <img src="https://cdn.sstatic.net/Img/home/jobs-remote.svg?v=a4b4d1b5a80c" alt="" class="jobs-item-img">
                                 <p class="jobs-item-description">Browse remote-friendly jobs</p>
                             </div>
                         </div>
@@ -674,8 +653,7 @@
                         </ul>
                     </div>
                     <div class="copyright">
-                        <p>site design / logo © 2020 Stack Exchange Inc; user contributions licensed under <a
-                                href="https://stackoverflow.com/help/licensing">cc by-sa</a>. rev 2020.10.2.37725</p>
+                        <p>site design / logo © 2020 Stack Exchange Inc; user contributions licensed under <a href="https://stackoverflow.com/help/licensing">cc by-sa</a>. rev 2020.10.2.37725</p>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,14 @@
 <?php
-session_start();
-include("header.html");
+session_start(); // Start the session or continue the existing one
+
+// Check if the session variable for logged-in status is set and true
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+    include("logged_in_header.html"); // Path to the header file for logged-in users
+} else {
+    include("header.html"); // Path to the default header file for guests
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,9 +20,7 @@ include("header.html");
 
 <body>
     <h1>Welcome to the website</h1>
-    <form action="index.php" method="post">
-        <input type="submit" name="logout" value="logut">
-    </form>
+
     <script src="assets/js/main.js"></script>
 </body>
 
@@ -23,7 +28,8 @@ include("header.html");
 <?php
 if (isset($_POST['logout'])) {
     session_destroy();
-    header("Location: login.php");
+    echo "<script>window.location.href = 'welcome.php';</script>";
+    exit;
 }
 include("footer.html");
 ?>

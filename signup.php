@@ -1,5 +1,11 @@
 <?php
+session_start(); // Start the session at the very beginning
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+    header('Location: index.php'); // Redirect to index.php if the user is already logged in
+    exit; // Make sure no further code is executed
+}
 include("header.html");
+require('db.php'); // Include the database connection
 ?>
 <html>
 
@@ -60,7 +66,7 @@ include("header.html");
                     <div>
                     </div>
                     <div id="formContainer">
-                        <form id="login-form" class="signupform" action="/users/signup?ssrc=head&amp;returnurl=https%3a%2f%2fstackoverflow.com%2fquestions%2f21279442%2fxampp-mysql-not-starting-attempting-to-start-mysql-service" method="POST">
+                        <form id="login-form" class="signupform" action="" method="POST">
 
                             <h1 class="flex--item fs-headline1 fw-bold lh-xs mb8 ws-nowrap">Create your account</h1>
 
@@ -137,4 +143,36 @@ include("header.html");
 
 <?php
 include("footer.html");
+
+
+// Insert user into the database
+if (isset($_POST['submit-button'])) {
+    $email = $conn->real_escape_string($_POST['email']);
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash the password for security
+
+    // Check if email already exists
+    $checkEmail = $conn->query("SELECT * FROM users WHERE email = '$email'");
+    if ($checkEmail->num_rows > 0) {
+        echo "<script>alert('Email already exists. Please use another email.');</script>";
+    } else {
+        // Insert user into the database
+        $insert = $conn->query("INSERT INTO users (email, password) VALUES ('$email', '$password')");
+        if ($insert) {
+            // Set session variables
+            $_SESSION['user_id'] = $conn->insert_id; // Or any other user identifier
+            $_SESSION['email'] = $email;
+            $_SESSION['loggedin'] = true;
+
+            // Optionally redirect to a different page
+            echo "<script>window.location.href = 'index.php';</script>";
+            exit;
+            // Adjust the redirection URL as necessary
+            exit; // Prevent further script execution after redirection
+        } else {
+            echo "<script>alert('Error: " . $conn->error . "');</script>";
+        }
+    }
+}
+
+$conn->close();
 ?>
