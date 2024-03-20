@@ -94,16 +94,37 @@
             <div class="avatar-dropdown">
                 <a href="" id="profAvatarContainer" class="btn btn-login"><img
                         src="assets/images/account_profile_user_avatar_icon_219236.png" class="avatar-image"
-                        alt="profileAvatar"></img> </a>
+                        alt="profileAvatar"></img></a>
                 <div class="dropdown-content">
                     <a href="profile.php">Profile</a>
                     <a href="settings.php">Settings</a>
-                    <a href="logout.php">Logout</a>
+                    <a href="logout.php">
+                        <form action="index.php" method="post">
+                            <input type="submit" class="btn btn-login" name="logout" value="Log Out">
+                        </form>
+                    </a>
                 </div>
             </div>
-            <form action="index.php" method="post">
-                <input type="submit" class="btn btn-login" name="logout" value="Log Out">
-            </form>
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle btn btn-login">
+                    New Question
+                    <!-- Adjust sizes as needed -->
+                </a>
+                <div class="dropdown-menu">
+                    <form id="questionForm" action="post_question.php" method="POST">
+                        <div class="form-group">
+                            <label for="questionTitle">Question Title:</label>
+                            <input type="text" id="questionTitle" name="questionTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="questionBody">Your Question:</label>
+                            <textarea id="questionBody" name="questionBody" required></textarea>
+                        </div>
+                        <button type="submit">Post Question</button>
+                    </form>
+                </div>
+            </div>
+
 
 
 
@@ -127,5 +148,31 @@
                 }
             }
         };</script>
+    <script>
+        document.querySelector('.dropdown').addEventListener('click', function (event) {
+            if (event.target.closest('.dropdown-toggle')) { // Checks if the clicked element is the dropdown-toggle or its descendant
+                event.preventDefault(); // Prevent default anchor behavior
+                var dropdown = this.querySelector('.dropdown-menu');
+                dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+            }
+        });
+
+
+        // Optional: Hide the dropdown when clicking outside of it
+        window.addEventListener('click', function (event) {
+            if (!event.target.matches('.dropdown-toggle')) {
+                if (!event.target.matches('.dropdown-menu') && !event.target.closest('.dropdown-menu')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-menu");
+                    for (var i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.style.display === 'block') {
+                            openDropdown.style.display = 'none';
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
 
 </body>

@@ -1777,3 +1777,72 @@ a#profAvatarContainer {
 section.hero {
   margin-top: 0;
 }
+
+svg.icon-md.btn.btn-register {
+  padding: 0 0 0 0;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.dropdown-menu {
+  right: 20px;
+  bottom: 460;
+}
+
+a.dropdown-toggle.btn.btn-register {
+  position: relative;
+  display: inline-block;
+}
+
+a.dropdown-toggle.btn.btn-register {
+  padding: 0 1 1 1;
+}
+
+.dropdown-toggle {
+
+  /* or block depending on layout */
+  padding: 5px;
+  /* Example padding; adjust as necessary */
+  line-height: 0;
+  /* Remove extra line-height space */
+}
+
+/* Ensure the dropdown menu is positioned correctly */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  /* Other styling */
+}
