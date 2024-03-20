@@ -1773,3 +1773,7 @@ a#profAvatarContainer {
 .dropdown-content {
   right: 15px;
 }
+
+section.hero {
+  margin-top: 0;
+}
