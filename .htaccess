@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteBase /website/SWE381Project/
+RewriteRule ^question/.*-(\d+)$ question.php?id=$1 [NC,L,QSA]

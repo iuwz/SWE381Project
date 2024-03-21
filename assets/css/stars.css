@@ -1,0 +1,20 @@
+.rating-form label {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.rating-form input[type="radio"] {
+    display: none;
+}
+
+.rating-form label:before {
+    content: "☆";
+    color: #ccc;
+    /* Color of unrated star */
+}
+
+.rating-form input[type="radio"]:checked~label:before {
+    content: "★";
+    color: #ffa500;
+    /* Color of rated star */
+}
