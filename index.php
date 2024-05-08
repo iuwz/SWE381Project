@@ -57,7 +57,7 @@ $stmt->close();
                     <?php foreach ($recentQuestions as $question) : ?>
                         <a href="/website/SWE381Project/question/<?php echo urlencode(str_replace(' ', '-', strtolower($question['title']))) . '-' . $question['id']; ?>" class="list-group-item">
                             <?php echo htmlspecialchars($question['title']); ?>
-                            <span class="badge badge-primary badge-pill"><?php echo $question['answer_count']; ?> answers</span>
+                            <span class="badge badge-primary badge-pill RQAS"><?php echo $question['answer_count']; ?> answers</span>
                         </a>
                     <?php endforeach; ?>
                 </div>
@@ -72,18 +72,23 @@ $stmt->close();
                 </nav>
             </div>
             <!-- Top Questions Column -->
-            <div class="col-lg-4">
-                <h2>Top Questions</h2>
-                <div class="list-group">
-                    <?php foreach ($topQuestions as $question) : ?>
-                        <a href="/website/SWE381Project/question/<?php echo urlencode(str_replace(' ', '-', strtolower($question['title']))) . '-' . $question['id']; ?>" class="list-group-item">
-                            <?php echo htmlspecialchars($question['title']); ?>
-                            <span class="badge badge-primary badge-pill"><?php echo $question['answer_count']; ?> answers</span>
-                        </a>
-                    <?php endforeach; ?>
+            <div class="card" id='topquestions' style="width: 18rem;">
+                <div class="card-header">
+                    Most Answered Questions
                 </div>
+                <ul class="list-group list-group-flush">
+                    <?php foreach ($topQuestions as $question) : ?>
+                        <li><a href="/website/SWE381Project/question/<?php echo urlencode(str_replace(' ', '-', strtolower($question['title']))) . '-' . $question['id']; ?>" class="list-group-item">
+                                <?php echo htmlspecialchars($question['title']); ?>
+                                <span class="badge badge-primary badge-pill MAQS"><?php echo $question['answer_count']; ?> answers</span>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
             </div>
+
         </div>
+    </div>
     </div>
 </body>
 

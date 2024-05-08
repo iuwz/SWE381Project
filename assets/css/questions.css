@@ -13,6 +13,11 @@ body {
 textarea {
     width: 100%;
     margin-top: 10px;
+    margin-left: auto;
+    /* This will center the textarea horizontally */
+    margin-right: auto;
+    /* This will center the textarea horizontally */
+    text-align: center;
 }
 
 button {
@@ -25,4 +30,18 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+.question {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    /* This will center the text */
+    display: flex;
+    /* This will make the children of .question align in the center */
+    flex-direction: column;
+    /* This will stack the children of .question vertically */
+    align-items: center;
+    /* This will center the children of .question horizontally */
 }

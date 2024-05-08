@@ -1,9 +1,28 @@
 .list-group-item {
-    margin-bottom: 10px;
-    padding: 15px;
+    margin-bottom: 5px;
+    padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .list-group-item:hover {
     background-color: #f8f8f8;
+}
+
+#topquestions {
+    position: absolute;
+    right: 5;
+    width: 18rem;
+    padding: 0;
+    height: 480px;
+}
+
+.RQAS {
+    position: relative;
+    left: 470px;
+}
+
+.MAQS {
+    position: relative;
+    left: 40;
+
 }

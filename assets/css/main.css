@@ -856,22 +856,8 @@ nav {
   margin: 10rem auto 0;
 }
 
-.card {
-  flex: 1 auto;
-  flex-basis: calc(33% - 4rem);
-  display: flex;
-  flex-direction: column;
-  background-color: var(--white);
-  box-shadow: var(--bs-sm);
-  padding: 3rem;
-  border-radius: 0.7rem;
-  margin: 2rem;
-  position: relative;
-}
 
-.card-body {
-  margin: 4rem 0;
-}
+
 
 .plan-type {
   display: inline-block;
@@ -1555,25 +1541,9 @@ nav {
     max-width: initial;
   }
 
-  .teams {
-    background-image: none;
-  }
 
-  .teams-plan {
-    width: 90%;
-  }
 
-  .teams-plan .card {
-    flex-basis: initial;
-  }
 
-  .teams-plan .card:nth-child(2) {
-    order: -1;
-  }
-
-  .teams-footer {
-    width: 90%;
-  }
 
   .questions-content .question-title {
     font-size: 2.3rem;
@@ -1819,7 +1789,7 @@ button[type="submit"]:hover {
 
 .dropdown-menu {
   right: 20px;
-  bottom: 460;
+
 }
 
 a.dropdown-toggle.btn.btn-register {

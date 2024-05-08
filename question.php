@@ -14,7 +14,17 @@ if ($loggedIn && isset($_POST['submit_answer'], $_POST['question_id'], $_POST['a
     if (!$stmt->execute()) {
         // Handle error; for simplicity, we'll just output a message
         echo "<script>alert('Error submitting answer.');</script>";
+    } else {
+
+
+        $newAnswerId = $conn->insert_id; // Get the ID of the newly inserted answer
+        echo "<script>
+    window.onload = function() {
+        document.getElementById($newAnswerId).scrollIntoView();
+    };
+    </script>";
     }
+
     $stmt->close();
 }
 
@@ -28,6 +38,7 @@ if ($loggedIn && isset($_POST['submit_rating'], $_POST['answer_id'], $_POST['rat
     if (!$stmt->execute()) {
         echo "<script>alert('Error submitting rating.');</script>";
     }
+
     $stmt->close();
 }
 
@@ -50,15 +61,21 @@ if ($loggedIn) {
 
 
 // Fetch answers for the question
-$stmt = $conn->prepare("SELECT body FROM answers WHERE question_id = ?");
+
+$stmt = $conn->prepare("SELECT * FROM questions WHERE id = ?");
 $stmt->bind_param("i", $id);
 $stmt->execute();
 $result = $stmt->get_result();
 if ($question = $result->fetch_assoc()) {
-    // Fetch answers for the question here or within HTML below as needed
+    //Fetch answers for the question here or within HTML below as needed
 } else {
     die("Question not found.");
 }
+
+$stmt = $conn->prepare("SELECT * FROM answers WHERE question_id = ?");
+$stmt->bind_param("i", $id);
+$stmt->execute();
+$result = $stmt->get_result();
 $answers = $result->fetch_all(MYSQLI_ASSOC);
 
 ?>
@@ -90,7 +107,7 @@ $answers = $result->fetch_all(MYSQLI_ASSOC);
         <div class="answers">
             <h2>Answers</h2>
             <?php foreach ($answers as $answer) : ?>
-                <div class="answer">
+                <div class="answer" id="<?php echo $answer['id']; ?>">
                     <h3><?php echo htmlspecialchars($answer['body']); ?></h3>
                     <!-- Star rating form -->
                     <?php if ($loggedIn) : ?>
@@ -104,64 +121,65 @@ $answers = $result->fetch_all(MYSQLI_ASSOC);
                         </form>
                     <?php endif; ?>
                 </div>
-            <?php endforeach; ?>
+        </div>
+    <?php endforeach; ?>
 
 
 
-        <?php else : ?>
-            <p><a href="login.php">Log in</a> to answer or rate answers.</p>
-        <?php endif; ?>
+<?php else : ?>
+    <p><a href="login.php">Log in</a> to answer or rate answers.</p>
+<?php endif; ?>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                $('form.answer-form').on('submit', function(e) {
-                    e.preventDefault(); // Prevent the form from submitting normally
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('form.answer-form').on('submit', function(e) {
+            e.preventDefault(); // Prevent the form from submitting normally
 
-                    var formData = $(this).serialize(); // Serialize the form data
+            var formData = $(this).serialize(); // Serialize the form data
 
-                    $.ajax({
-                        type: "POST",
-                        url: "question.php", // Assuming the form action is "question.php"
-                        data: formData,
-                        success: function(response) {
-                            // Handle success. You can refresh part of your page, show a message, etc.
-                            alert('Answer submitted successfully!');
-                            // Optionally clear the form or update the page content
-                            $('form.answer-form').find("textarea").val(""); // Clear the text area
-                        },
-                        error: function() {
-                            // Handle error
-                            alert('There was an error submitting your answer. Please try again.');
-                        }
-                    });
-                });
+            $.ajax({
+                type: "POST",
+                url: "question.php", // Assuming the form action is "question.php"
+                data: formData,
+                success: function(response) {
+                    // Handle success. You can refresh part of your page, show a message, etc.
+                    alert('Answer submitted successfully!');
+                    // Optionally clear the form or update the page content
+                    $('form.answer-form').find("textarea").val(""); // Clear the text area
+                },
+                error: function() {
+                    // Handle error
+                    alert('There was an error submitting your answer. Please try again.');
+                }
             });
-        </script>
-        <script>
-            $(document).ready(function() {
-                $('form.rating-form').on('submit', function(e) {
-                    e.preventDefault(); // Prevent default form submission
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $('form.rating-form').on('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
 
-                    var formData = $(this).serialize(); // Serialize the form data
+            var formData = $(this).serialize(); // Serialize the form data
 
-                    $.ajax({
-                        type: "POST",
-                        url: "question.php", // Update as necessary
-                        data: formData,
-                        success: function(response) {
-                            // Handle success
-                            alert('Rating submitted successfully!');
-                            // Here, you might want to update some part of your page
-                        },
-                        error: function() {
-                            // Handle error
-                            alert('There was an error submitting your rating. Please try again.');
-                        }
-                    });
-                });
+            $.ajax({
+                type: "POST",
+                url: "question.php", // Update as necessary
+                data: formData,
+                success: function(response) {
+                    // Handle success
+                    alert('Rating submitted successfully!');
+                    // Here, you might want to update some part of your page
+                },
+                error: function() {
+                    // Handle error
+                    alert('There was an error submitting your rating. Please try again.');
+                }
             });
-        </script>
+        });
+    });
+</script>
 
 </body>
 

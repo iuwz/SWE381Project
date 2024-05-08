@@ -174,143 +174,24 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
                 </div>
             </div>
 
-            <div class="teams-plan">
-                <div class="card card-basic">
-                    <div class="card-header">
-                        <h2 class="plan-type">Basic</h2>
-                        <p class="plan-description">Private knowledge base for teams</p>
-                    </div>
-                    <div class="card-body">
-                        <div class="plan-price">
-                            <div class="price">$6 USD</div>
-                            <span class="per">per teammate / month</span>
-                        </div>
-                        <div class="plan-features">
-                            <div class="plan-feature">
-                                <i class="far fa-calendar-alt"></i>
-                                <span class="plan-text">Free 30 day trial</span>
-                            </div>
-                            <div class="plan-feature">
-                                <i class="fab fa-keycdn"></i>
-                                <span class="plan-text">Your own private space hosted on stackoverflow.com</span>
-                            </div>
-                            <div class="plan-feature">
-                                <i class="fas fa-archive"></i>
-                                <span class="plan-text">Fully searchable archive</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-card">Get started for free</a>
-                    </div>
 
-                </div>
-
-                <div class="card card-business">
-                    <div class="card-most-used">
-                        <span>MOST USED</span>
-                        <i class="fas fa-city"></i>
-                    </div>
-                    <div class="card-header">
-                        <h2 class="plan-type">Business</h2>
-                        <p class="plan-description">Private knowledge base with SSO and premium features</p>
-                    </div>
-                    <div class="card-body">
-                        <div class="plan-price">
-                            <div class="price">$12 USD
-                            </div>
-                            <span class="per">per teammate / month</span>
-                        </div>
-                        <div class="plan-features">
-                            <div class="plan-feature">
-                                <i class="fas fa-key"></i>
-                                <span class="plan-text">Single sign-on (SSO) with SAML</span>
-                            </div>
-                            <div class="plan-feature">
-                                <i class="far fa-chart-bar"></i>
-                                <span class="plan-text">Reporting and analytics</span>
-                            </div>
-                            <div class="plan-feature">
-                                <i class="fas fa-plus-square"></i>
-                                <span class="plan-text">Priority customer support</span>
-                            </div>
-                            <div class="plan-feature">
-                                <i class="fas fa-star"></i>
-                                <span class="plan-text">99.5% uptime
-                                </span>
-                            </div>
-                            <div class="plan-feature">
-                                <i class="fas fa-plus"></i>
-                                <span class="plan-text">All the features of Basic tier</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-card">Get started</a>
-                    </div>
-
-                </div>
-
-                <div class="card card-enterprise">
-                    <div class="card-header">
-                        <h2 class="plan-type">Enterprise</h2>
-                        <p class="plan-description">Standalone knowledge base with enhanced security and flexible
-                            hosting
-
-                        </p>
-                    </div>
-                    <div class="card-body">
-                        <div class="plan-price">
-                            <div class="price">Custom pricing </div>
-                            <span class="per">Let’s talk about what you need</span>
-                        </div>
-                        <div class="plan-features">
-                            <div class="plan-feature">
-                                <i class="fas fa-key"></i>
-                                <span class="plan-text">Single sign-on with AD or SAML</span>
-                            </div>
-                            <div class="plan-feature">
-                                <i class="fas fa-mountain"></i>
-                                <span class="plan-text">Host on your cloud or servers – or our private managed
-                                    cloud</span>
-                            </div>
-                            <div class="plan-feature">
-                                <i class="fas fa-code"></i>
-                                <span class="plan-text">Robust read and write API</span>
-                            </div>
-                            <div class="plan-feature">
-                                <i class="fas fa-user"></i>
-                                <span class="plan-text">Your own customer success and community building
-                                    representative</span>
-                            </div>
-                            <div class="plan-feature">
-                                <i class="fas fa-star"></i>
-                                <span class="plan-text">99.5% uptime SLA and priority support</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-card">Request a demo</a>
-                    </div>
-
-                </div>
-            </div>
+        </div>
 
 
-            <div class="teams-footer">
-                <a class="teams-footer-item">
-                    <img src="https://cdn.sstatic.net/Img/product/teams/endorsements/g2.svg?v=670bf9279910" alt="">
-                    <div class="teams-footer-text"><strong>Leader</strong> <span>Summer 2020</span> </div>
-                </a>
-                <a class="teams-footer-item">
-                    <img src="https://cdn.sstatic.net/Img/product/teams/endorsements/g2.svg?v=670bf9279910" alt="">
-                    <div class="teams-footer-text"><strong>Users Love Us</strong> </div>
-                </a>
-                <a class="teams-footer-item">
-                    <img src="https://cdn.sstatic.net/Img/product/teams/endorsements/fastco.svg?v=5ebc802a76c7" alt="">
-                    <div class="teams-footer-text"><strong>Most Innovative Companies</strong> <span>2019</span> </div>
-                </a>
-            </div>
+        <div class="teams-footer">
+            <a class="teams-footer-item">
+                <img src="https://cdn.sstatic.net/Img/product/teams/endorsements/g2.svg?v=670bf9279910" alt="">
+                <div class="teams-footer-text"><strong>Leader</strong> <span>Summer 2020</span> </div>
+            </a>
+            <a class="teams-footer-item">
+                <img src="https://cdn.sstatic.net/Img/product/teams/endorsements/g2.svg?v=670bf9279910" alt="">
+                <div class="teams-footer-text"><strong>Users Love Us</strong> </div>
+            </a>
+            <a class="teams-footer-item">
+                <img src="https://cdn.sstatic.net/Img/product/teams/endorsements/fastco.svg?v=5ebc802a76c7" alt="">
+                <div class="teams-footer-text"><strong>Most Innovative Companies</strong> <span>2019</span> </div>
+            </a>
+        </div>
 
 
         </div>
